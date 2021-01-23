@@ -1,0 +1,19 @@
+# 局部变量
+var := var_g
+new := new_g
+
+test: var := var_j
+%c: new := new_j
+
+test: another
+	@echo "test:var => $(var)"
+	@echo "test:new => $(new)"
+
+another:
+	@echo "another:var => $(var)"
+	@echo "another:new => $(new)"
+	@$(MAKE) -f makefile.4 hc
+
+hc:
+	@echo "hc:var => $(var)"
+	@echo "hc:new => $(new)"

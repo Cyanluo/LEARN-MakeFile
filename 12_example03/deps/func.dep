@@ -1,0 +1,1 @@
+build/func.o deps/func.dep:src/func.c inc/const.h inc/func.h

@@ -1,0 +1,4 @@
+/home/cyan/workPlace/Learn/Make_l/13_example04/build/main/main.o /home/cyan/workPlace/Learn/Make_l/13_example04/build/main/main.dep: src/main.c inc/main.h \
+ /home/cyan/workPlace/Learn/Make_l/13_example04/common/inc/common.h \
+ /home/cyan/workPlace/Learn/Make_l/13_example04/common/inc/module_func.h \
+ /home/cyan/workPlace/Learn/Make_l/13_example04/libs/inc/stcfunc.h

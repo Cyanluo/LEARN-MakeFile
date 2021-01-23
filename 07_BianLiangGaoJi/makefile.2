@@ -1,0 +1,10 @@
+PATH := /usr/bin:/lll
+test1:
+	@echo "PATH => $(PATH)"
+	@echo "var => $(var)"
+	@echo "var1 => $(var1)"
+	@echo ""
+	$(MAKE) -f makefile.3
+	@echo ""
+	$(MAKE) -f makefile.3 -e
+	@echo ""
