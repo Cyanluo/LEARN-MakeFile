@@ -40,7 +40,7 @@ $(DEP_DIR)/%.dep :  %.c
 endif
 	@echo "Create dep => $@"
 	@set -e;\
-	$(CC) -MM -E $(filter %.c, $^) | sed 's,\(.*\).o[: ]*\b,$(OBJS_DIR)\/\1.o $@: ,g' > $@
+	$(CC) -MM -E $(filter %.c, $^) | sed 's,\(.*\)\.o[: ]*,$(OBJS_DIR)\/\1.o $@: ,g' > $@
 
 $(OBJS_DIR)/%.o: %.c
 	$(CC) -o $@ -c $(filter %.c, $^)

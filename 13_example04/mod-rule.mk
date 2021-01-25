@@ -37,7 +37,7 @@ $(DIR_OUTPUT)/%$(TYPE_OBJ): %$(TYPE_SRC)
 $(DIR_OUTPUT)/%$(TYPE_DEP): %$(TYPE_SRC)
 	@echo "Create dep => $@"
 	@set -e; \
-	$(CC) $(CFLAGS) -MM -E $^ | sed "s,\(.*\)$(TYPE_OBJ)[ :]*\b,$(DIR_OUTPUT)\/\1$(TYPE_OBJ) $@: ,g" > $@
+	$(CC) $(CFLAGS) -MM -E $^ | sed "s,\(.*\)\$(TYPE_OBJ)[ :]*,$(DIR_OUTPUT)\/\1$(TYPE_OBJ) $@: ,g" > $@
 
 clean:
 	$(RM) $(DIR_OUTPUT)/* OUTPUT
