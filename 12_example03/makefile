@@ -57,7 +57,7 @@ $(DEPS_DIR)/%$(DEP_TYPE): %$(SRC_TYPE)
 endif
 	@echo "Create dep => $@"
 	@set -e;\
-	$(CC) -MM -E $(CFLAGS) $(filter %$(SRC_TYPE), $^) | sed 's,\(.*\)$(LNK_TYPE)[: ]*\b,$(OBJS_DIR)\/\1$(LNK_TYPE) $@:,g' > $@
+	$(CC) -MM -E $(CFLAGS) $(filter %$(SRC_TYPE), $^) | sed 's,\(.*\)\$(LNK_TYPE)[: ]*,$(OBJS_DIR)\/\1$(LNK_TYPE) $@:,g' > $@
 
 $(DIRS):
 	$(MKDIR) $@
